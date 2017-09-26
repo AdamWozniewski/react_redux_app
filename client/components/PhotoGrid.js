@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import Photo from './Photo';
 
 class PhotoGrid extends Component {

@@ -8,23 +8,34 @@ class Photo extends Component {
             <figure className="grid-figure">
                 <div className="grid-photo-wrap">
                     <Link to={`/view/${this.props.post.code}`}>
-                        <img src={this.props.post.display_src} alt={this.props.caption} className="grid-photo"/>
+                        <img src={this.props.post.display_src}
+                             alt={this.props.caption}
+                             className="grid-photo"
+                        />
                     </Link>
                     <CSSTransitionGroup transitionName="like"
                                         transitionEnterTimeout={500}
                                         transitionLeaveTimeout={500}>
-                        <span key={this.props.post.likes} className="likes-heart">
+                        <span key={this.props.post.likes}
+                              className="likes-heart"
+                        >
                             {this.props.post.likes}
                         </span>
                     </CSSTransitionGroup>
                     <figcaption>
                         <p>{this.props.post.caption}</p>
                         <div className="control-buttons">
-                            <button onClick={this.props.increment.bind(null, this.props.post.likes)} className="likes">&hearts; {this.props.post.likes}</button>
-                            <Link className="button" to={`/view/${this.props.post.code}`}>
+                            <button onClick={this.props.increment.bind(null, this.props.post.likes, this.props.post.code)}
+                                    className="likes">
+                                &hearts; {this.props.post.likes}
+                            </button>
+                            <Link className="button"
+                                  to={`/view/${this.props.post.code}`}
+                            >
                                 <span className="comment-count">
                                     <span className="speech-bubble"></span>
-                                    {this.props.comments[this.props.post.code] ? this.props.comments[this.props.post.code].length : 0}
+                                    {this.props.comments[this.props.post.code] ?
+                                        this.props.comments[this.props.post.code].length : 0}
                                 </span>
                             </Link>
                         </div>

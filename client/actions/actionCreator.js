@@ -3,10 +3,10 @@ import ACTIONS from '../static/actionsTypes';
 // Te akcje są dostępne w CAŁEJ aplikacji !
 
 // increment serca
-export function increment(index) {
+export function increment(index, postId) {
     return {
         type: ACTIONS.INCREMENT_LIKES,
-        index,
+        index, postId
     }
 }
 

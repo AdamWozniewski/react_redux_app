@@ -6,9 +6,10 @@ class Main extends Component {
 		return (
 			<div>
 				<h1>
-					<Link to="/">AdamReduxGrid</Link>
+					<Link to="/">AdamRedux</Link>
 				</h1>
 				{React.cloneElement(this.props.children, this.props)}
+				{/* Tu będą wszystkie komponenty */}
 			</div>
 		)
 	}

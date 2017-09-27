@@ -15,7 +15,7 @@ const defaultState = { // nasze dane do przekazania do state
     posts, comments
 };
 
-const store = createStore(rootReducer, defaultState); // stawamy store z reduxa
+const store = createStore(rootReducer, defaultState, window.devToolsExtension ? window.devToolsExtension() : f => f); // stawamy store z reduxa
 
 
 // eksport histri zmian i stanu

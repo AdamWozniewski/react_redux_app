@@ -6,5 +6,7 @@ import posts from './posts';
 import comments from './comments';
 
 const rootReducer = combineReducers({posts, comments, routing: routerReducer});
+window.devToolsExtension ? window.devToolsExtension() : f => f
+
 
 export default rootReducer;

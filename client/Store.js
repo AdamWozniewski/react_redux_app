@@ -17,7 +17,6 @@ const defaultState = { // nasze dane do przekazania do state
 
 const store = createStore(rootReducer, defaultState, window.devToolsExtension ? window.devToolsExtension() : f => f); // stawamy store z reduxa
 
-
 // eksport histri zmian i stanu
 export const history = syncHistoryWithStore(browserHistory, store);
 // export const history = syncHistoryWithStore(hashHistory);

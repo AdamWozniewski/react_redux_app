@@ -12,13 +12,11 @@ function postComments(state = [], action) {
                         text: action.comment
                     }
             ]
-            break;
         case ACTIONS.REMOVE_COMMENT:
-            let newState = state.filter(obj => {
-                return obj != state[action.i]
+            const newState = state.filter(obj => {
+                return obj !== state[action.i]
             });
             return [...newState];
-            break;
         default: return state
     }
 }

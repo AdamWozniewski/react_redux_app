@@ -13,11 +13,7 @@ function posts(state = [], action) {
                 return element;
             });
             // tu zmieniamy stan postu
-            return [...element
-                // ...state.slice(0, i), // wytnij wszystko do szukanego postu
-                // {...element, likes: element.likes++}, // update odnalezionego postu
-                // ...state.slice(i + 1) // wytnij wszystko po wyszukanym poscie
-            ];
+            return [...element];
             break;
         default: return state;
     }
